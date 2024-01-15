@@ -1,12 +1,12 @@
 import Resource from "./Resource";
+import * as systemConnector from "./systemConnector";
 
 function ResourceUsageBar() {
     return (
-
         <div id="resource-usage-bar">
             <Resource 
             imgPath={"#"}
-            usageMetric={"2%"}
+            usageMetric={`${systemConnector.getCpuUtilization()}%`}
             resourceName={"CPU"}
           />
     
