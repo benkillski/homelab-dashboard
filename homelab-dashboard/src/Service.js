@@ -1,16 +1,14 @@
-function Service() {
+function Service( {imgPath, serviceName, ipAddress, hostName} ) {
     return (
-        <a href="#">
-          <div id="services-container">
-            <div className="service-container">
-              <span><img src="#"></img></span>
-              <div>
-                <h3>SERVICE_NAME</h3>
-                <p>IP_ADDRESS | HOSTNAME</p>
-              </div>
+      <a id="services-container" href="#">
+          <div className="service-container">
+            <span><img src={imgPath}></img></span>
+            <div>
+              <h3>{serviceName}</h3>
+              <p>{ipAddress} | {hostName}</p>
             </div>
           </div>
-        </a>
+      </a>
     );
 }
 
