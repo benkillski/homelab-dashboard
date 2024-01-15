@@ -1,8 +1,10 @@
 import './App.css';
+import Service from './Service';
 
 function App() {
   return (
     <div id="main-container">
+
       <div id="resource-usage-bar">
 
         <div className="resource-usage-container">
@@ -51,40 +53,13 @@ function App() {
         </div>
 
       </div>
+
       <div id="services-section">
 
         <h2>Services</h2>
-
-        <div id="services-container">
-          <div className="service-container">
-            <span><img src="#"></img></span>
-            <div>
-              <h3>SERVICE_NAME</h3>
-              <p>IP_ADDRESS | HOSTNAME</p>
-            </div>
-          </div>
-        </div>
-
-        <div id="services-container">
-          <div className="service-container">
-            <span><img src="#"></img></span>
-            <div>
-              <h3>SERVICE_NAME</h3>
-              <p>IP_ADDRESS | HOSTNAME</p>
-            </div>
-          </div>
-        </div>
-
-        <div id="services-container">
-          <div className="service-container">
-            <span><img src="#"></img></span>
-            <div>
-              <h3>SERVICE_NAME</h3>
-              <p>IP_ADDRESS | HOSTNAME</p>
-            </div>
-          </div>
-        </div>
-        
+        <Service />
+        <Service />
+        <Service />
       </div>
     </div>
   );
