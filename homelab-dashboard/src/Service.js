@@ -1,6 +1,6 @@
-function Service( {imgPath, serviceName, ipAddress, hostName} ) {
+function Service( {serviceURL, imgPath, serviceName, ipAddress, hostName} ) {
     return (
-      <a id="service-container" href="#">
+      <a id="service-container" href={serviceURL} target="blank">
           <span><img src={imgPath}></img></span>
           <div>
             <h3>{serviceName}</h3>

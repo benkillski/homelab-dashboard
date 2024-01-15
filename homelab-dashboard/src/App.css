@@ -8,13 +8,21 @@ html, body {
   background: rgb(36, 36, 36);
   padding: 20px;
 }
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 #main-container{
   background: rgb(29, 39, 59);
-  padding: 20px 50px;
+  padding: 30px 50px;
   border-radius: 25px;
+  height: 95%;
+  width: 100%;
 }
 #resource-usage-bar {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 50px;
 }
@@ -49,11 +57,11 @@ html, body {
 }
 #service-container {
   display: flex;
+  justify-content: center;
   align-items: center;
-  padding-left: 20px;
   margin: 10px;
   background: rgb(58, 68, 90);
   border-radius: 10px;
-  width: 300px;
+  width: 400px;
   height: 100px;
 }
