@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  color: white;
 }
 html, body {
   height: 100%;
@@ -10,8 +11,7 @@ html, body {
 #main-container{
   background: rgb(29, 39, 59);
   padding: 20px 50px;
-  border-radius: 1%;
-  color: white;
+  border-radius: 25px;
 }
 #resource-usage-bar {
   display: flex;
@@ -40,4 +40,20 @@ html, body {
 .resource-stats {
   display: flex;
   justify-content: space-between;
+}
+#services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#service-container {
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin: 10px;
+  background: rgb(58, 68, 90);
+  border-radius: 10px;
+  width: 300px;
+  height: 100px;
 }
