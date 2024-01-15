@@ -4,8 +4,9 @@ export function getCpuUtilization() {
     return $.ajax({
         url: "http://localhost:3001/cpuUsage",
         success: function (result) {
-            console.log(result);
-            return JSON.stringify(result);
+            const cpuUtilizationPercent = JSON.stringify(result);
+            console.log(cpuUtilizationPercent);
+            return cpuUtilizationPercent;
         },
         error: function() {
             console.log("Error");
