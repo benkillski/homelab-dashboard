@@ -1,12 +1,14 @@
 import Resource from "./Resource";
 import * as systemConnector from "./systemConnector";
 
+let cpuUtilizationPercent = systemConnector.getCpuUtilization();
+
 function ResourceUsageBar() {
     return (
         <div id="resource-usage-bar">
             <Resource 
             imgPath={"#"}
-            usageMetric={`${systemConnector.getCpuUtilization()}%`}
+            usageMetric={`${cpuUtilizationPercent.responseText}%`}
             resourceName={"CPU"}
           />
     
