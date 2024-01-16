@@ -3,6 +3,7 @@ import * as systemConnector from "./systemConnector";
 
 let cpuUtilizationPercent = systemConnector.getCpuUtilization();
 let memUtilizationPercent = systemConnector.getMemoryUtilization();
+let freeDiskSpace = systemConnector.getFreeDiskSpace();
 
 function ResourceUsageBar() {
     return (
@@ -21,7 +22,7 @@ function ResourceUsageBar() {
     
           <Resource 
             imgPath={"#"}
-            usageMetric={"20GB"}
+            usageMetric={`${freeDiskSpace.responseText}`}
             resourceName={"Free"}
           />
         </div>
