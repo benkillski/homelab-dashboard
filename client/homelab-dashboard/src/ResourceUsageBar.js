@@ -2,6 +2,7 @@ import Resource from "./Resource";
 import * as systemConnector from "./systemConnector";
 
 let cpuUtilizationPercent = systemConnector.getCpuUtilization();
+let memUtilizationPercent = systemConnector.getMemoryUtilization();
 
 function ResourceUsageBar() {
     return (
@@ -14,7 +15,7 @@ function ResourceUsageBar() {
     
           <Resource 
             imgPath={"#"}
-            usageMetric={"13%"}
+            usageMetric={`${memUtilizationPercent.responseText}%`}
             resourceName={"MEM"}
           />
     
