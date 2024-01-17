@@ -1,4 +1,4 @@
-import $, { Callbacks } from "jquery";
+import $ from "jquery";
 
 export function getCpuUtilization(callback) {
     $.ajax({

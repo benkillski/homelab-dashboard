@@ -1,3 +1,4 @@
+import React from "react";
 import './App.css';
 import ResourceUsageBar from './ResourceUsageBar';
 import ServicesSection from './ServicesSection';

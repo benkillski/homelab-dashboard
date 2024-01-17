@@ -1,4 +1,6 @@
+import React from "react";
 import Service from "./Service";
+import * as systemNetworking from "./systemNetworking";
 
 function ServicesSection() {
     return (
@@ -7,24 +9,27 @@ function ServicesSection() {
             <div id="services-container">
                 <Service 
                     serviceURL={"http://###.###.###.###:###"}
-                    imgpath={"#"}
+                    imgPath={"#"}
+                    altText={"#"}
                     serviceName={"Proxmox VE"}
-                    ipAddress={"###.###.###.###"}
-                    hostName={"proxmox"}
+                    ipAddress={systemNetworking.resolveIPV4Address("nas-omv.lan")}
+                    hostName={"pve"}
                 />
                 <Service 
-                    serviceURL={"http://###.###.###.###:###"}
-                    imgpath={"#"}
+                    serviceURL={"http://nas-omv"}
+                    imgPath={"#"}
+                    altText={"#"}
                     serviceName={"Open Media Vault - NAS"}
-                    ipAddress={"###.###.###.###"}
-                    hostName={"omv-nas"}
+                    ipAddress={systemNetworking.resolveIPV4Address("google.com")}
+                    hostName={"nas-omv"}
                 />
                 <Service 
                     serviceURL={"http://###.###.###.###:###"}
-                    imgpath={"#"}
+                    imgPath={"#"}
+                    altText={"#"}
                     serviceName={"Supermico IMPI"}
-                    ipAddress={"###.###.###.###"}
-                    hostName={"smc-server"}
+                    ipAddress={systemNetworking.resolveIPV4Address("SMC-X8SIL-F")}
+                    hostName={"SMC-X8SIL-F"}
                 />
             </div>
         </div>
