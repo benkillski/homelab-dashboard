@@ -1,26 +1,54 @@
-import $ from "jquery";
+import $, { Callbacks } from "jquery";
 
-export function getCpuUtilization() {
-    return $.get('http://localhost:3001/cpuUsage', {}, function (responseText) {
-        return responseText;
+export function getCpuUtilization(callback) {
+    $.ajax({
+        url: "http://localhost:3001/cpuUsage",
+        method: "GET",
+        success: function (data) {
+            callback(null , data.toString());
+        },
+        error: function (xhr, status, error) {
+            callback(`Error: ${status} - ${error}`);
+        }
     });
 }
 
-export function getMemoryUtilization() {
-    return $.get('http://localhost:3001/memUsage', {}, function (responseText) {
-        return responseText;
+export function getMemoryUtilization(callback) {
+    $.ajax({
+        url: "http://localhost:3001/memUsage",
+        method: "GET",
+        success: function (data) {
+            callback(null , data.toString());
+        },
+        error: function (xhr, status, error) {
+            callback(`Error: ${status} - ${error}`);
+        }
     });
 }
 
-export function getFreeDiskSpace() {
-    return $.get('http://localhost:3001/freeDiskSpace', {}, function (responseText) {
-        return responseText;
+export function getFreeDiskSpace(callback) {
+    $.ajax({
+        url: "http://localhost:3001/freeDiskSpace",
+        method: "GET",
+        success: function (data) {
+            callback(null , data.toString());
+        },
+        error: function (xhr, status, error) {
+            callback(`Error: ${status} - ${error}`);
+        }
     });
 }
 
-export function getTotalDiskSpace() {
-    return $.get('http://localhost:3001/totalDiskSpace', {}, function (responseText) {
-        return responseText;
+export function getTotalDiskSpace(callback) {
+    $.ajax({
+        url: "http://localhost:3001/totalDiskSpace",
+        method: "GET",
+        success: function (data) {
+            callback(null , data.toString());
+        },
+        error: function (xhr, status, error) {
+            callback(`Error: ${status} - ${error}`);
+        }
     });
 }
 
