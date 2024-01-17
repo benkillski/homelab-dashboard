@@ -34,8 +34,8 @@ html, body {
   height: 60px;
 }
 .resource-img-container {
-  background: red;
   margin-right: 20px;
+  width: 30px;
 }
 .resource-img-container img {
   width: 100%;

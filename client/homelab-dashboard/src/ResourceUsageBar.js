@@ -59,21 +59,21 @@ function ResourceUsageBar() {
   return (
     <div id="resource-usage-bar">
         <Resource 
-        imgPath={"#"}
+        imgPath={"/images/cpu-icon.png"}
         usageMetric={`${cpuUtilizationPercent}%`}
         resourceName={"CPU"}
         percent={cpuUtilizationPercent}
       />
 
       <Resource 
-        imgPath={"#"}
+        imgPath={"/images/memory-icon.png"}
         usageMetric={`${memUtilizationPercent}%`}
         resourceName={"MEM"}
         percent={memUtilizationPercent}
       />
 
       <Resource 
-        imgPath={"#"}
+        imgPath={"/images/storage-icon.png"}
         usageMetric={`${systemConnector.formatBytes(freeDiskSpace)}`}
         resourceName={"Free"}
         percent={(Number(freeDiskSpace) / Number(totalDiskSpace) * 100).toFixed(2)}
