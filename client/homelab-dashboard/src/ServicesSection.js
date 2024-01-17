@@ -1,6 +1,5 @@
 import React from "react";
 import Service from "./Service";
-import * as systemNetworking from "./systemNetworking";
 
 function ServicesSection() {
     return (
@@ -12,7 +11,7 @@ function ServicesSection() {
                     imgPath={"#"}
                     altText={"#"}
                     serviceName={"Proxmox VE"}
-                    ipAddress={systemNetworking.resolveIPV4Address("nas-omv.lan")}
+                    ipAddress={""}
                     hostName={"pve"}
                 />
                 <Service 
@@ -20,7 +19,7 @@ function ServicesSection() {
                     imgPath={"#"}
                     altText={"#"}
                     serviceName={"Open Media Vault - NAS"}
-                    ipAddress={systemNetworking.resolveIPV4Address("google.com")}
+                    ipAddress={""}
                     hostName={"nas-omv"}
                 />
                 <Service 
@@ -28,7 +27,7 @@ function ServicesSection() {
                     imgPath={"#"}
                     altText={"#"}
                     serviceName={"Supermico IMPI"}
-                    ipAddress={systemNetworking.resolveIPV4Address("SMC-X8SIL-F")}
+                    ipAddress={""}
                     hostName={"SMC-X8SIL-F"}
                 />
             </div>
