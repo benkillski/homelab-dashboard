@@ -15,6 +15,10 @@ router.get('/freeDiskSpace', (req, res) => {
   res.send(getFreeDiskSpace());
 });
 
+router.get('/totalDiskSpace', (req, res) => {
+  res.send(getTotalDiskSpace());
+});
+
 function getCpuUsagePercent() {
   const cpus = os.cpus();
   const totalCpuTime = cpus.reduce((acc, cpu) => {
@@ -45,22 +49,19 @@ function getFreeDiskSpace() {
   let freeDiskSpace = "";
 
   disk.check(path, function(err, info) {
-    console.log(formatBytes(info.free));
-    freeDiskSpace = formatBytes(info.free);
+    freeDiskSpace = "" + info.free;
   });
   return freeDiskSpace;
 }
 
-function formatBytes(bytes, decimals = 2) {
-  if (!+bytes) return '0 Bytes'
+function getTotalDiskSpace() {
+  let path = os.platform() === "win32" ? "c:" : "/";
+  let totalDiskSpace = "";
 
-  const k = 1024
-  const dm = decimals < 0 ? 0 : decimals
-  const sizes = ['Bytes', 'KiB', 'MiB', 'GiB', 'TiB', 'PiB', 'EiB', 'ZiB', 'YiB']
-
-  const i = Math.floor(Math.log(bytes) / Math.log(k))
-
-  return `${parseFloat((bytes / Math.pow(k, i)).toFixed(dm))} ${sizes[i]}`
+  disk.check(path, function(err, info) {
+    totalDiskSpace = "" + info.total;
+  });
+  return totalDiskSpace;
 }
 
 module.exports = router;

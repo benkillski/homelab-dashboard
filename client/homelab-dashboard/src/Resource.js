@@ -1,4 +1,4 @@
-function Resource ({ imgPath, usageMetric, resourceName }) {
+function Resource ({ imgPath, usageMetric, resourceName, percent }) {
     return (
         <div className="resource-usage-container">
           <div className="resource-img-container">
@@ -10,7 +10,7 @@ function Resource ({ imgPath, usageMetric, resourceName }) {
               <span>{resourceName}</span>
             </div>
             <div>
-            ==================
+              <progress value={percent} max="100">{percent}%</progress>
             </div>
           </div>
         </div>
