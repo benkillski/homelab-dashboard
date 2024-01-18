@@ -5,12 +5,24 @@
 #
 
 services:
-  service:
-    logoPath: 'path-to-logo-image'
-    serviceName: 'name-of-service'
-    ipv4Address: 'ip-address-of-service'
-    port: 'port-number-for-service'
-    hostName: 'hostname-of-service'
+  proxmox:
+    logoPath: '#'
+    serviceName: 'Proxmox VE'
+    ipv4Address: '192.168.1.200'
+    port: '8006'
+    hostName: 'pve'
+  openmediavault:
+    logoPath: '/'
+    serviceName: 'Open Media Vault - NAS'
+    ipv4Address: '192.168.1.28'
+    port: '80'
+    hostName: 'nas-omv'
+  smc-ipmi:
+    logoPath: '/'
+    serviceName: 'Supermicro IPMI'
+    ipv4Address: '192.168.1.28'
+    port: '80'
+    hostName: 'SMC-X8SIL-F'
   
 template:
   service:
