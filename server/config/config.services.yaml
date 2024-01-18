@@ -1,0 +1,21 @@
+#
+# This Config file is used to add/remove/edit services on the Homelab Dashboard
+#
+# Once you are done making changes to this file, save it and refresh the dashboard
+#
+
+services:
+  service:
+    logoPath: 'path-to-logo-image'
+    serviceName: 'name-of-service'
+    ipv4Address: 'ip-address-of-service'
+    port: 'port-number-for-service'
+    hostName: 'hostname-of-service'
+  
+template:
+  service:
+    logoPath: 'path-to-logo-image'
+    serviceName: 'name-of-service'     # Name of the service. This text will be displayed as the title of the service in the dashboard
+    ipv4Address: 'address-of-service'  # The IPV4 address of the service
+    port: 'port-number-for-service'     # The port number used to access the service
+    hostName: 'hostname-of-service'     # The host name of the service
